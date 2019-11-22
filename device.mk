@@ -67,7 +67,8 @@ PRODUCT_COPY_FILES += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
-    init.vayu.rc
+    init.vayu.rc \
+    init.xiaomiparts.rc
 
 # Input
 PRODUCT_COPY_FILES += \
