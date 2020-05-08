@@ -32,3 +32,6 @@ on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
     write /proc/sys/vm/swappiness 100
     write /sys/block/zram0/disksize 2147483648
+
+    # Reinit lmkd to reconfigure lmkd properties
+    setprop lmkd.reinit 1
