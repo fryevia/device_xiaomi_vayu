@@ -86,4 +86,7 @@
      <string name="haptic_level_summary">Adjust the strength level of overall haptic feedback</string>
      <string name="haptic_level_summary_incompatible">Your kernel did not support custom QTI Haptic Strength Level</string>
 
+    <!-- Refresh Rate tile -->
+    <string name="refresh_rate_tile_title">Refresh Rate</string>
+
 </resources>
