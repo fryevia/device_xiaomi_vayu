@@ -11,10 +11,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configurations
 $(call inherit-product, device/xiaomi/vayu/device.mk)
 
-# Inherit common ArrowOS configurations
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit common DerpFest configurations
+$(call inherit-product, vendor/derp/config/common.mk)
 
-PRODUCT_NAME := arrow_vayu
+#Derp Config
+DERP_BUILDTYPE := CI
+
+PRODUCT_NAME := derp_vayu
 PRODUCT_DEVICE := vayu
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := Poco X3 Pro
@@ -25,6 +28,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-DEVICE_MAINTAINER := kubersharma001
-TARGET_INCLUDE_PIXEL_CHARGER := true
 
