@@ -46,6 +46,9 @@
 # Health
 /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/wireless(/.*)?         u:object_r:sysfs_wireless_supply:s0
 
+# Haptic
+/sys/module/qti_haptics/parameters/level                       u:object_r:sysfs_vibrator:s0
+
 # IR
 /dev/ir_spi                                                             u:object_r:lirc_device:s0
 /dev/lirc[0-9]                                                          u:object_r:lirc_device:s0

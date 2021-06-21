@@ -282,3 +282,8 @@ service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
     group nfc
     writepid /dev/cpuset/system-background/tasks
     disabled
+
+on post-fs-data
+    # Allow system to adjust haptic level directly
+    chown system system /sys/module/qti_haptics/parameters/level
+    chmod 0664 /sys/module/qti_haptics/parameters/level
