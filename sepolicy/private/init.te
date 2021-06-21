@@ -14,3 +14,7 @@ allow init vendor_sysfs_battery_supply:file { setattr };
 
 allow init sysfs_graphics:file { read open };
 
+
+# Allow init to read and write to sysfs_vibrator
+allow init sysfs_vibrator:dir search;
+allow init sysfs_vibrator:file rw_file_perms;

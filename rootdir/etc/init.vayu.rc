@@ -30,3 +30,6 @@ on property:sys.boot_completed=1
     chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
     chmod 0666 /sys/class/drm/sde-crtc-0/measured_fps
 
+    # Allow system to adjust haptic level directly
+    chown system system /sys/module/qti_haptics/parameters/level
+    chmod 0664 /sys/module/qti_haptics/parameters/level

@@ -20,3 +20,6 @@
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps u:object_r:sysfs_fps:s0
 /sys/class/drm/sde-crtc-0/measured_fps                              u:object_r:sysfs_fps:s0
 
+
+# Haptic
+/sys/module/qti_haptics/parameters/level                       u:object_r:sysfs_vibrator:s0
