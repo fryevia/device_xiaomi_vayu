@@ -1,4 +1,1 @@
 allow system_app sysfs_kgsl:file r_file_perms;
-allow system_app sysfs_fps:dir search;
-allow system_app sysfs_fps:file r_file_perms;
-
