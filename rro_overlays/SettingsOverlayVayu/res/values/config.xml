@@ -23,4 +23,7 @@
 
     <!-- Device specific doze package -->
     <string name="config_customDozePackage">org.lineageos.settings/org.lineageos.settings.doze.DozeSettingsActivity</string>
+
+    <!--DerpFest Maintainer-->
+    <string name="maintainer_name">fryevia x nullxception</string>
 </resources>
