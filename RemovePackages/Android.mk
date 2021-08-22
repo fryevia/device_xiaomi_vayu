@@ -10,6 +10,7 @@ LOCAL_OVERRIDES_PACKAGES := \
     Chrome-Stub \
     DevicePolicyPrebuilt \
     Drive \
+    FilesPrebuilt \
     GoogleCamera \
     Maps \
     MyVerizonServices \
