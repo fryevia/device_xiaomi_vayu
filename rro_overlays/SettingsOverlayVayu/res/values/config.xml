@@ -26,4 +26,8 @@
 
     <!--DerpFest Maintainer-->
     <string name="maintainer_name">fryevia x nullxception</string>
+
+    <!-- Custom Updater Activity -->
+    <string name="update_package" translatable="false">org.lineageos.settings</string>
+    <string name="update_activity" translatable="false">org.lineageos.settings.support.SupportPageActivity</string>
 </resources>

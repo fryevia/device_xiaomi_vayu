@@ -28,6 +28,7 @@ LOCAL_OVERRIDES_PACKAGES := \
     SoundAmplifierPrebuilt \
     SprintDM \
     SprintHM \
+    Updater \
     VZWAPNLib \
     VzwOmaTrigger \
     WallpapersBReel2020 \
