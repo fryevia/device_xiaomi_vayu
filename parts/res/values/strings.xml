@@ -100,5 +100,6 @@
     <string name="lcd_hbm_tile_title">HBM</string>
     <string name="lcd_cabc_title">CABC Mode</string>
     <string name="lcd_features_info">High Brightness Mode (HBM) increases the maximum brightness of the display to improve visibility under sunlight. Increases power consumption.\n\nCABC (Content Adaptive Backlight Control) adjusts display and backlight brightness based on currently shown content, to reduce power consumption without degradation.</string>
+    <string name="kernel_not_supported">Kernel did not support this feature</string>
 
 </resources>

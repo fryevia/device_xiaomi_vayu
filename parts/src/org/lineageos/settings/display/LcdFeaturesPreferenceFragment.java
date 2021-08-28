@@ -25,9 +25,13 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 
 import org.lineageos.settings.R;
+import org.lineageos.settings.utils.FileUtils;
 
 public class LcdFeaturesPreferenceFragment extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
+
+    public static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
+    public static final String CABC_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/cabc";
 
     public static final String HBM_PROP = "persist.deviceparts.lcd.hbm";
     public static final String CABC_PROP = "persist.deviceparts.lcd.cabc";
@@ -51,6 +55,7 @@ public class LcdFeaturesPreferenceFragment extends PreferenceFragment
         mHbmPref.setOnPreferenceChangeListener(this);
         mCabcPref = (ListPreference) findPreference(KEY_CABC);
         mCabcPref.setOnPreferenceChangeListener(this);
+        validateKernelSupport();
     }
 
     @Override
@@ -60,6 +65,7 @@ public class LcdFeaturesPreferenceFragment extends PreferenceFragment
         mHbmPref.setSummary(mHbmPref.getEntry());
         mCabcPref.setValue(SystemProperties.get(CABC_PROP, "0"));
         mCabcPref.setSummary(mCabcPref.getEntry());
+        validateKernelSupport();
     }
 
     @Override
@@ -77,5 +83,16 @@ public class LcdFeaturesPreferenceFragment extends PreferenceFragment
         }
 
         return true;
+    }
+
+    private void validateKernelSupport() {
+        if (!FileUtils.fileExists(HBM_NODE)) {
+            mHbmPref.setSummary(getResources().getString(R.string.kernel_not_supported));
+            mHbmPref.setEnabled(false);
+        }
+        if (!FileUtils.fileExists(CABC_NODE)) {
+            mCabcPref.setSummary(getResources().getString(R.string.kernel_not_supported));
+            mCabcPref.setEnabled(false);
+        }
     }
 }

@@ -22,6 +22,7 @@ import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 
 import org.lineageos.settings.R;
+import org.lineageos.settings.utils.FileUtils;
 
 public class HbmTileService extends TileService {
 
@@ -55,6 +56,12 @@ public class HbmTileService extends TileService {
     public void onStartListening() {
         super.onStartListening();
         tile = getQsTile();
+        if (!FileUtils.fileExists(LcdFeaturesPreferenceFragment.HBM_NODE)) {
+            tile.setState(Tile.STATE_UNAVAILABLE);
+            tile.setSubtitle(getResources().getString(R.string.kernel_not_supported));
+            tile.updateTile();
+            return;
+        }
         updateCurrentHbmMode();
         updateHbmTile();
     }

@@ -1,0 +1,2 @@
+# Allow devicesettings_app to lookup vendor_sysfs_graphics
+allow devicesettings_app vendor_sysfs_graphics:dir search;
